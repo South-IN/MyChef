@@ -6,6 +6,8 @@ const userRoutes = require("./routes/user");
 const cors = require("cors");
 const app = express();
 
+port = process.env.PORT || 4000;
+
 app.use(cors());
 app.use(express.json());
 app.use((req, res, next) => {
@@ -19,8 +21,8 @@ app.use("/api/user", userRoutes);
 mongoose
   .connect(process.env.DB_URL)
   .then(() => {
-    app.listen(4000, () => {
-      console.log("connected to database and listening to:", 4000);
+    app.listen(port, () => {
+      console.log("connected to database and listening to:", port);
     });
   })
   .catch((err) => {
