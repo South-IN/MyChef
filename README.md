@@ -1,18 +1,18 @@
-# MyChef
+# 🍳 MyChef
 
 Welcome to MyChef! This project is a recipe app that helps users browse through recipes, search for specific recipes, ask AI for recipe suggestions, and save recipes for later.
 
-[Deployed Website](https://mychef.onrender.com/)
+🌐 [MyChef](https://mychef.onrender.com/)
 
 ## Table of Contents
 
-- [About](#about)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Contact](#contact)
+- [📖 About](#about)
+- [✨ Features](#features)
+- [🛠 Technologies Used](#technologies-used)
+- [🚀 Installation](#installation)
+- [🧑‍🍳 Usage](#usage)
+- [🤝 Contributing](#contributing)
+- [📬 Contact](#contact)
 
 ## About
 
@@ -20,12 +20,12 @@ MyChef is a comprehensive recipe application designed to make cooking and meal p
 
 ## Features
 
-- Browse through a wide selection of recipes.
-- Search for specific recipes.
-- Ask AI for recipe suggestions using the Gemini AI API.
-- Save recipes for later.
-- Mobile responsive design.
-- Secure authentication system.
+- 🍽 Browse through a wide selection of recipes.
+- 🔍 Search for specific recipes.
+- 🤖 Ask AI for recipe suggestions using the Gemini AI API.
+- 💾 Save recipes for later.
+- 📱 Mobile responsive design.
+- 🔒 Secure authentication system.
 
 ## Technologies Used
 
@@ -73,16 +73,16 @@ To run this project locally, follow these steps:
     ```
    You can get the `VITE_API_KEY` from [Gemini API](https://ai.google.dev/gemini-api).
 
-7. Start the development server:
+7. Start the backend server:
     ```sh
     cd ../backend
-    npm start
+    nodemon server.js
     ```
 
 8. In a new terminal, start the frontend server:
     ```sh
     cd ../recipe-app
-    npm start
+    npm run dev
     ```
 
 ## Usage
@@ -104,7 +104,7 @@ Contributions are welcome! Please fork this repository and submit a pull request
 
 If you have any questions or feedback, feel free to reach out:
 
-- Email: saurav.codes42@gmail.com
-- LinkedIn: [Saurav Singh](https://www.linkedin.com/in/saurav-singh-228554281/)
+- 📧 Email: saurav.codes42@gmail.com
+- 💼 LinkedIn: [Saurav Singh](https://www.linkedin.com/in/saurav-singh-228554281/)
 
 Thank you for using MyChef!
