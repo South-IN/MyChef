@@ -11,18 +11,11 @@ const Modal = ({ setShowModal, idMeal }) => {
   const { user } = useAuthContext();
   const [error, setError] = useState(null);
   const [open, setOpen] = useState(false);
-  const format = (text) => {
-    if (!text) {
-      return;
-    }
-    let data = text.split(".");
-    return data.join(".<br>");
-  };
+
   useEffect(() => {
     const getRecipeDetails = async () => {
       const data = await getMealDetails(idMeal);
       setRecipeDetails(data);
-      console.log(recipeDetails);
     };
     getRecipeDetails();
   }, []);
@@ -41,14 +34,17 @@ const Modal = ({ setShowModal, idMeal }) => {
       recipeDetails.strMealThumb,
     ];
     const recipe = { idMeal, strMeal, strMealThumb };
-    const response = await fetch("http://localhost:4000/api/recipes/", {
-      method: "POST",
-      body: JSON.stringify(recipe),
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${user.token}`,
-      },
-    });
+    const response = await fetch(
+      "https://mychef-backend.onrender.com/api/recipes/",
+      {
+        method: "POST",
+        body: JSON.stringify(recipe),
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${user.token}`,
+        },
+      }
+    );
     const json = await response.json();
     if (!response.ok) {
       setError(json.error);

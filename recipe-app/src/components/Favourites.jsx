@@ -10,12 +10,15 @@ const Favourites = () => {
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      const response = await fetch("http://localhost:4000/api/recipes", {
-        headers: {
-          method: "GET",
-          authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://mychef-backend.onrender.com/api/recipes",
+        {
+          headers: {
+            method: "GET",
+            authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       const json = await response.json();
 
       if (response.ok) {

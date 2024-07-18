@@ -9,7 +9,7 @@ const RecipeCard = ({ recipe, isFav, setIsFav }) => {
   const { user } = useAuthContext();
   const handleClick = (event) => {
     event.preventDefault();
-    console.log(event);
+
     setShowModal(true);
     setTimeout(() => {
       window.scrollBy({ top: event.screenY + 100, behavior: "smooth" });
@@ -18,14 +18,13 @@ const RecipeCard = ({ recipe, isFav, setIsFav }) => {
 
   const handleDelete = async (event) => {
     event.preventDefault();
-    console.log(recipe);
 
     if (!user) {
       return;
     }
 
     const response = await fetch(
-      "http://localhost:4000/api/recipes/" + recipe._id,
+      "https://mychef-backend.onrender.com/api/recipes/" + recipe._id,
       {
         method: "DELETE",
         headers: {
@@ -34,7 +33,6 @@ const RecipeCard = ({ recipe, isFav, setIsFav }) => {
       }
     );
     const json = await response.json();
-    console.log("json:", json);
 
     if (response.ok) {
       dispatch({ type: "DELETE_RECIPE", payload: json });
