@@ -31,7 +31,7 @@ function Search() {
   const [recipes, setRecipes] = useState([]);
   const getRecipes = async (ingredient) => {
     const data = await searchMealsByIngredient(ingredient);
-    await getSample();
+    
     if (data) {
       setRecipes(data);
     } else {
