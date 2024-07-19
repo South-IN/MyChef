@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { useAuthContext } from "./hooks/useAuthContext";
+import axios from "axios";
 
 const App = () => {
   const url = "https://mychef-backend.onrender.com/";
