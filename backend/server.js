@@ -15,6 +15,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", async (req, res) => {
+  res.status(200).json({ mssg: "site reloaded" });
+});
+
 app.use("/api/recipes", recipeRoutes);
 app.use("/api/user", userRoutes);
 
