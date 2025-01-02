@@ -7,7 +7,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
-  background-image: url("./assets/plain bg.jpg");
+  background-color: bisque;
   background-size: cover;
   background-attachment: fixed;
 }
